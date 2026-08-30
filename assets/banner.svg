@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c1b"/>
+      <stop offset="50%" stop-color="#19132d"/>
+      <stop offset="100%" stop-color="#2a1238"/>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff79c6"/>
+      <stop offset="50%" stop-color="#bd93f9"/>
+      <stop offset="100%" stop-color="#8be9fd"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff79c6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#bd93f9" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes floatOrb { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+    @keyframes scanline { 0% { transform: translateY(0px); } 100% { transform: translateY(480px); } }
+
+    .cursor { animation: blink 0.9s infinite; }
+    .floating-orb { animation: floatOrb 5s ease-in-out infinite; }
+    .scan-bar { animation: scanline 4s linear infinite; }
+    .mono { font-family: 'Courier New', Courier, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1280" height="500" rx="20" fill="url(#bgGradDark)" stroke="url(#borderGrad)" stroke-width="2"/>
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="1100" cy="120" r="140" fill="#ff79c6" opacity="0.12" filter="url(#neonGlow)" class="floating-orb" />
+  <circle cx="200" cy="380" r="160" fill="#bd93f9" opacity="0.08" filter="url(#neonGlow)" class="floating-orb" />
+
+  <!-- Horizontal Scanner Line -->
+  <line x1="20" y1="10" x2="1260" y2="10" stroke="#ff79c6" stroke-width="1.5" opacity="0.3" class="scan-bar" />
+
+  <!-- Terminal Header -->
+  <g transform="translate(45, 45)">
+    <rect width="700" height="32" rx="6" fill="#131022" />
+    <circle cx="16" cy="16" r="5" fill="#ff5555" />
+    <circle cx="32" cy="16" r="5" fill="#f1fa8c" />
+    <circle cx="48" cy="16" r="5" fill="#50fa7b" />
+    <text x="70" y="21" fill="#6272a4" font-size="12" class="mono">King-Love-Coding: ~ cat README.md</text>
+  </g>
+
+  <!-- Main Info Section -->
+  <g transform="translate(45, 125)">
+    <text x="0" y="45" fill="url(#textGrad)" font-size="44" font-weight="800" class="sans" letter-spacing="1">Vivek Bhati</text>
+    <text x="0" y="80" fill="#f8f8f2" font-size="20" font-weight="600" class="mono">Full Stack Developer &amp; Web Developer<tspan class="cursor" fill="#ff79c6">_</tspan></text>
+    
+    <!-- Tagline Card -->
+    <rect x="0" y="110" width="660" height="48" rx="8" fill="#211b3b" stroke="#44475a" stroke-width="1"/>
+    <text x="20" y="140" fill="#f1fa8c" font-size="14" class="mono">"Turning caffeine into clean code ☕ → 💻"</text>
+
+    <!-- Skill Tags -->
+    <g transform="translate(0, 180)">
+      <rect x="0" y="0" width="115" height="30" rx="15" fill="#32244d" stroke="#ff79c6" stroke-width="1"/>
+      <text x="57" y="19" fill="#ff79c6" font-size="12" text-anchor="middle" class="sans" font-weight="600">Leadership</text>
+
+      <rect x="125" y="0" width="115" height="30" rx="15" fill="#32244d" stroke="#bd93f9" stroke-width="1"/>
+      <text x="182" y="19" fill="#bd93f9" font-size="12" text-anchor="middle" class="sans" font-weight="600">Team Work</text>
+
+      <rect x="250" y="0" width="130" height="30" rx="15" fill="#32244d" stroke="#8be9fd" stroke-width="1"/>
+      <text x="315" y="19" fill="#8be9fd" font-size="12" text-anchor="middle" class="sans" font-weight="600">Code Analyzer</text>
+
+      <rect x="390" y="0" width="110" height="30" rx="15" fill="#32244d" stroke="#50fa7b" stroke-width="1"/>
+      <text x="445" y="19" fill="#50fa7b" font-size="12" text-anchor="middle" class="sans" font-weight="600">Patience</text>
+
+      <rect x="510" y="0" width="95" height="30" rx="15" fill="#32244d" stroke="#ffb86c" stroke-width="1"/>
+      <text x="557" y="19" fill="#ffb86c" font-size="12" text-anchor="middle" class="sans" font-weight="600">Focus</text>
+    </g>
+
+    <!-- Interactive Neon Sign -->
+    <g transform="translate(0, 240)">
+      <rect x="0" y="0" width="320" height="42" rx="8" fill="#150f28" stroke="#ff79c6" stroke-width="1.5" filter="url(#neonGlow)"/>
+      <text x="160" y="26" fill="#ff79c6" font-size="13" font-weight="bold" text-anchor="middle" class="mono" letter-spacing="2">⚡ KEEP CODING • KEEP GROWING</text>
+    </g>
+  </g>
+
+  <!-- Right Side Avatar placeholder / graphic frame -->
+  <g transform="translate(860, 45)">
+    <rect width="360" height="410" rx="16" fill="#1c1633" stroke="#bd93f9" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <image href="avatar.png" x="10" y="10" width="340" height="390" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+</svg>
