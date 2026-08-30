@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 130" width="100%" height="100%">
+  <defs>
+    <linearGradient id="trophyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19132d"/>
+      <stop offset="100%" stop-color="#0f0c1b"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <rect width="900" height="130" rx="14" fill="url(#trophyBg)" stroke="#ff79c6" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Trophy 1 -->
+  <g transform="translate(30, 20)">
+    <rect width="190" height="90" rx="8" fill="#211938" stroke="#ffb86c" stroke-width="1"/>
+    <text x="95" y="38" fill="#ffb86c" font-size="24" text-anchor="middle">🏆</text>
+    <text x="95" y="60" fill="#f8f8f2" font-size="12" font-weight="bold" text-anchor="middle" class="sans">Master Architect</text>
+    <text x="95" y="76" fill="#6272a4" font-size="10" text-anchor="middle" class="sans">Full Stack Pro</text>
+  </g>
+
+  <!-- Trophy 2 -->
+  <g transform="translate(250, 20)">
+    <rect width="190" height="90" rx="8" fill="#211938" stroke="#50fa7b" stroke-width="1"/>
+    <text x="95" y="38" fill="#50fa7b" font-size="24" text-anchor="middle">⚡</text>
+    <text x="95" y="60" fill="#f8f8f2" font-size="12" font-weight="bold" text-anchor="middle" class="sans">Clean Coder</text>
+    <text x="95" y="76" fill="#6272a4" font-size="10" text-anchor="middle" class="sans">High Efficiency</text>
+  </g>
+
+  <!-- Trophy 3 -->
+  <g transform="translate(470, 20)">
+    <rect width="190" height="90" rx="8" fill="#211938" stroke="#8be9fd" stroke-width="1"/>
+    <text x="95" y="38" fill="#8be9fd" font-size="24" text-anchor="middle">🎯</text>
+    <text x="95" y="60" fill="#f8f8f2" font-size="12" font-weight="bold" text-anchor="middle" class="sans">Code Analyzer</text>
+    <text x="95" y="76" fill="#6272a4" font-size="10" text-anchor="middle" class="sans">Precision &amp; Focus</text>
+  </g>
+
+  <!-- Trophy 4 -->
+  <g transform="translate(690, 20)">
+    <rect width="180" height="90" rx="8" fill="#211938" stroke="#ff79c6" stroke-width="1"/>
+    <text x="90" y="38" fill="#ff79c6" font-size="24" text-anchor="middle">👥</text>
+    <text x="90" y="60" fill="#f8f8f2" font-size="12" font-weight="bold" text-anchor="middle" class="sans">Team Leader</text>
+    <text x="90" y="76" fill="#6272a4" font-size="10" text-anchor="middle" class="sans">Coordination &amp; Drive</text>
+  </g>
+</svg>
